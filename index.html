@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyPro X1 — Professional Drone for Creators</title>
+  <meta name="description" content="SkyPro X1 — a professional-grade cinema drone with 8K camera, 45-minute flight time and 15 km range. Built for creators who fly for a living." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0d10'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ff6a3d'/%3E%3Cpath d='M6 8l6 5M26 8l-6 5M6 24l6-5M26 24l-6-5' stroke='%23e8ebf0' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Shared SVG symbols (feature icons + gallery drone silhouette) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="drone-sil" fill="none" stroke-linecap="round">
+        <path d="M-22 -10 H0 M22 -10 H0" stroke-width="3" />
+        <path d="M-36 -10 H-10 M10 -10 H36" stroke-width="4" />
+        <ellipse cx="0" cy="0" rx="15" ry="5.5" fill="currentColor" stroke="none" />
+        <path d="M-7 5 V13 M7 5 V13 M-12 15 H12" stroke-width="3" />
+        <circle cx="12" cy="7" r="4" fill="currentColor" stroke="none" />
+      </g>
+      <symbol id="icon-battery" viewBox="0 0 24 24">
+        <rect x="2" y="7" width="17" height="10" rx="2.5" />
+        <path d="M22 10.5v3" />
+        <path d="M6 10.5v3M9.5 10.5v3M13 10.5v3" />
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24">
+        <rect x="2.5" y="6.5" width="19" height="13" rx="2.5" />
+        <circle cx="12" cy="13" r="3.6" />
+        <path d="M8 6.5 9.4 4h5.2L16 6.5" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 3 4.5 6v5.2c0 4.6 3.2 7.9 7.5 9.8 4.3-1.9 7.5-5.2 7.5-9.8V6L12 3Z" />
+        <path d="m8.8 12 2.3 2.3 4.1-4.6" />
+      </symbol>
+      <symbol id="icon-signal" viewBox="0 0 24 24">
+        <circle cx="12" cy="18.5" r="1.4" />
+        <path d="M8.5 15a5 5 0 0 1 7 0" />
+        <path d="M5.6 11.8a9 9 0 0 1 12.8 0" />
+        <path d="M2.8 8.6a13 13 0 0 1 18.4 0" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SkyPro home">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+          <circle cx="16" cy="16" r="5" fill="var(--accent)" />
+          <path d="M6 8l6 5M26 8l-6 5M6 24l6-5M26 24l-6-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+        <span>Sky<em>Pro</em></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#specs">Specs</a>
+        <a href="#gallery">Gallery</a>
+        <a class="btn btn-primary btn-sm" href="#pre-order">Pre-order</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="hero">
+      <div id="hero-canvas" aria-hidden="true"></div>
+
+      <div class="hero-loader" id="hero-loader" aria-hidden="true">
+        <span class="hero-loader-text">SKYPRO X1</span>
+        <span class="hero-loader-sub">initializing flight systems<i>.</i><i>.</i><i>.</i></span>
+      </div>
+
+      <div class="container hero-content">
+        <p class="hero-eyebrow reveal">NEW &middot; FLAGSHIP SERIES</p>
+        <h1 class="reveal">SkyPro <span class="accent-text">X1</span><br />Professional drone for creators</h1>
+        <p class="hero-sub reveal">Cinema-grade 8K imaging, 45 minutes of flight time and omnidirectional obstacle sensing — in a drone that folds into your backpack.</p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary btn-lg" href="#pre-order">Pre-order now</a>
+          <a class="btn btn-ghost btn-lg" href="#features">Learn more</a>
+        </div>
+        <ul class="hero-chips reveal" aria-label="Key specs">
+          <li>8K / 30fps video</li>
+          <li>45-min flight time</li>
+          <li>15 km transmission</li>
+        </ul>
+      </div>
+
+      <a class="scroll-cue" href="#features" aria-label="Scroll to features">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6" /></svg>
+      </a>
+    </section>
+
+    <!-- ============================ FEATURES ============================ -->
+    <section class="section" id="features">
+      <div class="container">
+        <p class="eyebrow reveal">Why SkyPro X1</p>
+        <h2 class="reveal">Engineered to disappear<br />so your footage stands out.</h2>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-battery" /></svg></div>
+            <h3>45-min flight time</h3>
+            <p>A 5,200 mAh smart battery with dual-cell redundancy keeps you airborne almost a full hour — capture the whole golden hour on one charge.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-camera" /></svg></div>
+            <h3>8K cinema camera</h3>
+            <p>A 1-inch CMOS sensor records 8K/30 or 4K/120 with 14 stops of dynamic range, on a vibration-isolated 3-axis gimbal.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-shield" /></svg></div>
+            <h3>Obstacle avoidance</h3>
+            <p>Omnidirectional vision sensors and dual LiDAR map the environment in real time, so the X1 brakes and reroutes on its own.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-signal" /></svg></div>
+            <h3>15 km range</h3>
+            <p>Quad-antenna O4+ transmission streams a 1080p/60 feed up to 15 km away with adaptive frequency hopping.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= SPECS ============================== -->
+    <section class="section section-alt" id="specs">
+      <div class="container">
+        <p class="eyebrow reveal">Technical specifications</p>
+        <h2 class="reveal">Every gram, accounted for.</h2>
+
+        <div class="specs-card reveal">
+          <dl class="specs-grid">
+            <div class="spec"><dt>Takeoff weight</dt><dd>895 g</dd></div>
+            <div class="spec"><dt>Diagonal wheelbase</dt><dd>380 mm</dd></div>
+            <div class="spec"><dt>Dimensions (folded)</dt><dd>182 × 96 × 78 mm</dd></div>
+            <div class="spec"><dt>Dimensions (unfolded)</dt><dd>380 × 310 × 105 mm</dd></div>
+            <div class="spec"><dt>Max ascent speed</dt><dd>8 m/s (Sport mode)</dd></div>
+            <div class="spec"><dt>Max speed</dt><dd>68 km/h</dd></div>
+            <div class="spec"><dt>Max flight time</dt><dd>45 min</dd></div>
+            <div class="spec"><dt>Transmission range</dt><dd>15 km (O4+)</dd></div>
+            <div class="spec"><dt>Camera sensor</dt><dd>1&quot; CMOS, 20 MP</dd></div>
+            <div class="spec"><dt>Video</dt><dd>8K/30, 4K/120, 10-bit D-Log</dd></div>
+            <div class="spec"><dt>Gimbal</dt><dd>3-axis mechanical (tilt ±135°)</dd></div>
+            <div class="spec"><dt>Battery</dt><dd>5,200 mAh LiPo 4S, 86 Wh</dd></div>
+            <div class="spec"><dt>Obstacle sensing</dt><dd>Omnidirectional + LiDAR</dd></div>
+            <div class="spec"><dt>Wind resistance</dt><dd>Level 7 (≈ 17 m/s)</dd></div>
+            <div class="spec"><dt>Operating temperature</dt><dd>−10 °C to 40 °C</dd></div>
+            <div class="spec"><dt>Storage</dt><dd>8 GB internal + microSD (up to 1 TB)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ GALLERY ============================= -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <p class="eyebrow reveal">Shot on X1</p>
+        <h2 class="reveal">Where will it take you?</h2>
+
+        <div class="carousel reveal" id="carousel" aria-roledescription="carousel" aria-label="SkyPro X1 gallery">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="carousel-slide" role="group" aria-label="1 of 4">
+                <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Drone flying over alpine peaks at sunrise">
+                  <defs><linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2a1e4f"/><stop offset=".55" stop-color="#b23a67"/><stop offset="1" stop-color="#ff9a5a"/>
+                  </linearGradient></defs>
+                  <rect width="800" height="450" fill="url(#sky1)"/>
+                  <circle cx="540" cy="300" r="52" fill="#ffd9a0" opacity=".9"/>
+                  <polygon points="0,450 140,240 300,450" fill="#3a2b57"/>
+                  <polygon points="180,450 380,180 600,450" fill="#241a3a"/>
+                  <polygon points="380,180 330,250 360,240 395,262 430,235 380,180" fill="#f5e9ff" opacity=".85"/>
+                  <polygon points="520,450 700,260 800,380 800,450" fill="#31234a"/>
+                  <g style="color:#14101f" transform="translate(400 150) scale(1.5)"><use href="#drone-sil"/></g>
+                </svg>
+                <figcaption><strong>Alpine dawn</strong><span>Long's Peak · 6:04 AM</span></figcaption>
+              </figure>
+
+              <figure class="carousel-slide" role="group" aria-label="2 of 4">
+                <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Drone flying along a coastline">
+                  <defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#7fd4ff"/><stop offset="1" stop-color="#1c6ea4"/>
+                  </linearGradient></defs>
+                  <rect width="800" height="450" fill="url(#sky2)"/>
+                  <circle cx="140" cy="90" r="38" fill="#fff7e0" opacity=".9"/>
+                  <rect y="250" width="800" height="200" fill="#14507e"/>
+                  <path d="M0 250 Q200 238 400 250 T800 250 V270 Q600 282 400 270 T0 270 Z" fill="#3f8fbf" opacity=".8"/>
+                  <path d="M0 300 Q260 288 520 302 T800 298" stroke="#8fd0f2" stroke-width="3" fill="none" opacity=".5"/>
+                  <path d="M0 340 Q300 328 600 342 T800 338" stroke="#8fd0f2" stroke-width="3" fill="none" opacity=".35"/>
+                  <path d="M0 450 L0 380 Q240 330 520 392 Q680 425 800 408 L800 450 Z" fill="#e8d5a8"/>
+                  <g style="color:#0c2233" transform="translate(565 130) scale(1.4)"><use href="#drone-sil"/></g>
+                </svg>
+                <figcaption><strong>Coastline run</strong><span>Big Sur · chase mode</span></figcaption>
+              </figure>
+
+              <figure class="carousel-slide" role="group" aria-label="3 of 4">
+                <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Drone hovering above a city at night">
+                  <defs><linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#0a0f1e"/><stop offset="1" stop-color="#1b2440"/>
+                  </linearGradient></defs>
+                  <rect width="800" height="450" fill="url(#sky3)"/>
+                  <circle cx="650" cy="80" r="30" fill="#e9edf5"/>
+                  <circle cx="640" cy="72" r="30" fill="#0d1326" opacity=".85"/>
+                  <g fill="#101828">
+                    <rect x="30" y="230" width="90" height="220"/><rect x="140" y="180" width="110" height="270"/>
+                    <rect x="270" y="260" width="80" height="190"/><rect x="370" y="140" width="120" height="310"/>
+                    <rect x="510" y="220" width="95" height="230"/><rect x="625" y="170" width="105" height="280"/>
+                  </g>
+                  <g fill="#ffd27a" opacity=".85">
+                    <rect x="155" y="200" width="9" height="12"/><rect x="185" y="230" width="9" height="12"/><rect x="220" y="205" width="9" height="12"/>
+                    <rect x="390" y="170" width="9" height="12"/><rect x="425" y="210" width="9" height="12"/><rect x="455" y="185" width="9" height="12"/>
+                    <rect x="645" y="200" width="9" height="12"/><rect x="680" y="235" width="9" height="12"/><rect x="52" y="260" width="9" height="12"/>
+                  </g>
+                  <g style="color:#e9edf5" transform="translate(250 110) scale(1.35)"><use href="#drone-sil"/></g>
+                </svg>
+                <figcaption><strong>Night skyline</strong><span>Downtown · 20 MP still</span></figcaption>
+              </figure>
+
+              <figure class="carousel-slide" role="group" aria-label="4 of 4">
+                <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Drone above a misty forest ridge">
+                  <defs><linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#0e2016"/><stop offset="1" stop-color="#2f5d3a"/>
+                  </linearGradient></defs>
+                  <rect width="800" height="450" fill="url(#sky4)"/>
+                  <polygon points="0,450 120,260 260,450" fill="#1d3d28"/>
+                  <polygon points="160,450 340,220 540,450" fill="#152c1e"/>
+                  <polygon points="460,450 640,250 800,430 800,450" fill="#1d3d28"/>
+                  <rect y="300" width="800" height="30" fill="#ffffff" opacity=".07"/>
+                  <rect y="340" width="800" height="24" fill="#ffffff" opacity=".05"/>
+                  <g fill="#0f2417">
+                    <polygon points="90,330 120,270 150,330"/><polygon points="150,340 185,265 220,340"/>
+                    <polygon points="560,330 595,262 630,330"/><polygon points="630,345 660,285 690,345"/>
+                  </g>
+                  <g style="color:#07130c" transform="translate(520 130) scale(1.45)"><use href="#drone-sil"/></g>
+                </svg>
+                <figcaption><strong>Forest ridge</strong><span>Oregon · LiDAR terrain follow</span></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m14 6-6 6 6 6"/></svg>
+          </button>
+          <button class="carousel-btn next" id="carousel-next" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m10 6 6 6-6 6"/></svg>
+          </button>
+          <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Choose slide"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== PRE-ORDER ============================ -->
+    <section class="section section-alt" id="pre-order">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Be first in the air.</h2>
+            <p>Pre-orders open Q4 2026. Join the list for launch-day pricing and early accessory bundles.</p>
+          </div>
+          <form class="cta-form" id="preorder-form" novalidate>
+            <label class="sr-only" for="preorder-email">Email address</label>
+            <input id="preorder-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+            <button class="btn btn-primary" type="submit">Join the list</button>
+            <p class="cta-msg" id="preorder-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+          <circle cx="16" cy="16" r="5" fill="var(--accent)" />
+          <path d="M6 8l6 5M26 8l-6 5M6 24l6-5M26 24l-6-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+        <span>Sky<em>Pro</em></span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#top">About</a>
+        <a href="#pre-order">Contact</a>
+        <a href="#top">Privacy</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year">2026</span> SkyPro Aerial Systems. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Shown only if ES modules fail to boot (e.g. page opened via file://) -->
+  <div id="compat-warning" hidden role="alert">
+    <strong>Couldn&rsquo;t start the 3D scene.</strong><br />
+    ES modules need to be served over HTTP. From this folder run:
+    <code>python -m http.server 8000</code> &nbsp;then open&nbsp; <code>http://localhost:8000</code>
+  </div>
+
+  <noscript>
+    <p style="text-align:center;padding:1rem">SkyPro X1 needs JavaScript for the 3D experience.</p>
+  </noscript>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+  <script>
+    // Fallback: if the module app hasn't booted within a few seconds, show a hint.
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        if (!window.__SKYPRO_BOOTED) document.getElementById('compat-warning').hidden = false;
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
